@@ -1,0 +1,46 @@
+let object=[{
+    question:"What is my nickname?",
+    answer:"Kush"
+  },
+  
+  {
+    question:"What is my favariote color?",
+    answer:"Yellow"
+  },
+  
+  {
+    question:"where do I live?",
+    answer:"Allahabad"
+  },
+  
+  {
+    question:"where is my village?",
+    answer:"Rokari"
+  }
+  ]
+  
+  var score=0;
+  
+  var temp=require('readline-sync');
+  
+  for(i=0;i<object.length;i++)
+  {
+      console.log();
+      var input=temp.question(object[i].question);
+      console.log("score:"+quiz(object[i].answer,input));
+  
+  }
+  console.log("Final score:"+score);
+  
+  
+  
+  function quiz(answer,useranswer)
+  {
+      if(answer===useranswer)
+      {
+        return ++score;
+      }
+      else{
+        return "Your answer is wrong"
+      }
+  }
